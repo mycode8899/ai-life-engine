@@ -1,0 +1,38 @@
+name: Feature request
+description: A change that fits the runtime roadmap
+title: "[feature] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Phase 1 is the core runtime. Later phases cover heartbeat, events, memory, models, goals, agent adapters, and the plugin SDK. Say which phase the request belongs to.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What a developer cannot do today.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: The API or behavior you want, and why it stays model-agnostic.
+    validations:
+      required: true
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Roadmap phase
+      options:
+        - Phase 1 - Core runtime
+        - Phase 2 - Heartbeat
+        - Phase 3 - Events
+        - Phase 4 - Memory
+        - Phase 5 - Model adapters
+        - Phase 6 - Goals and planning
+        - Phase 7 - Agent integration
+        - Phase 8 - Developer ecosystem
+        - Unsure
+    validations:
+      required: true

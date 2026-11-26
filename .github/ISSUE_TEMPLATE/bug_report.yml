@@ -1,0 +1,44 @@
+name: Bug report
+description: A defect in the runtime, persistence, health checks, or CLI
+title: "[bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Describe a defect in the shipped runtime. Do not include API keys, private data directories, or exploit details.
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened
+      description: What you expected, and what the runtime did instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: A short script or the CLI commands. Use a temporary data directory.
+      render: python
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      placeholder: 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      placeholder: 3.12.3
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: Ubuntu 24.04
+    validations:
+      required: true
